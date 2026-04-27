@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Web Modeler" exporterVersion="ef3429c" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.7.0">
+  <bpmn:process id="MyFirstAgenteIA" name="MyFirstAgenteIA" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:extensionElements>
+        <zeebe:properties>
+          <zeebe:property name="publicAccess" value="true" />
+        </zeebe:properties>
+        <zeebe:formDefinition formId="FormRegistroDatos" />
+      </bpmn:extensionElements>
+      <bpmn:outgoing>Flow_1evg2dh</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_1evg2dh" sourceRef="StartEvent_1" targetRef="Activity_14pxdgx" />
+    <bpmn:serviceTask id="Activity_14pxdgx" name="Determinar tareas a realizar" zeebe:modelerTemplate="io.camunda.connectors.OpenAI.v1" zeebe:modelerTemplateVersion="5" zeebe:modelerTemplateIcon="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjU2cHgiIGhlaWdodD0iMjYwcHgiIHZpZXdCb3g9IjAgMCAyNTYgMjYwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIj4KICAgIDx0aXRsZT5PcGVuQUk8L3RpdGxlPgogICAgPGc+CiAgICAgICAgPHBhdGggZD0iTTIzOS4xODM5MTQsMTA2LjIwMjc4MyBDMjQ1LjA1NDMwNCw4OC41MjQyMDk2IDI0My4wMjIyOCw2OS4xNzMzODA1IDIzMy42MDc1OTksNTMuMDk5ODg2NCBDMjE5LjQ1MTY3OCwyOC40NTg4MDIxIDE5MC45OTk3MDMsMTUuNzgzNjEyOSAxNjMuMjEzMDA3LDIxLjczOTUwNSBDMTQ3LjU1NDA3Nyw0LjMyMTQ1ODgzIDEyMy43OTQ5MDksLTMuNDIzOTg1NTQgMTAwLjg3OTAxLDEuNDE4NzM4OTggQzc3Ljk2MzExMDUsNi4yNjE0NjM0OSA1OS4zNjkwMDkzLDIyLjk1NzI1MzYgNTIuMDk1OTYyMSw0NS4yMjE0MjE5IEMzMy44NDM2NDk0LDQ4Ljk2NDQ4NjcgMTguMDkwMTcyMSw2MC4zOTI3NDkgOC44NjY3MjUxMyw3Ni41ODE4MDMzIEMtNS40NDM0OTEsMTAxLjE4Mjk2MiAtMi4xOTU0NDQzMSwxMzIuMjE1MjU1IDE2Ljg5ODY2NjIsMTUzLjMyMDA5NCBDMTEuMDA2MDg2NSwxNzAuOTkwNjU2IDEzLjAxOTcyODMsMTkwLjM0Mzk5MSAyMi40MjM4MjMxLDIwNi40MjI5OTEgQzM2LjU5NzU1NTMsMjMxLjA3MjM0NCA2NS4wNjgwMzQyLDI0My43NDY1NjYgOTIuODY5NTczOCwyMzcuNzgzMzcyIEMxMDUuMjM1NjM5LDI1MS43MDgyNDkgMTIzLjAwMTExMywyNTkuNjMwOTQyIDE0MS42MjM5NjgsMjU5LjUyNjkyIEMxNzAuMTA1MzU5LDI1OS41NTIxNjkgMTk1LjMzNzYxMSwyNDEuMTY1NzE4IDIwNC4wMzc3NzcsMjE0LjA0NTY2MSBDMjIyLjI4NzM0LDIxMC4yOTYzNTYgMjM4LjAzODQ4OSwxOTguODY5NzgzIDI0Ny4yNjcwMTQsMTgyLjY4NTI4IEMyNjEuNDA0NDUzLDE1OC4xMjc1MTUgMjU4LjE0MjQ5NCwxMjcuMjYyNzc1IDIzOS4xODM5MTQsMTA2LjIwMjc4MyBMMjM5LjE4MzkxNCwxMDYuMjAyNzgzIFogTTE0MS42MjM5NjgsMjQyLjU0MTIwNyBDMTMwLjI1NTY4MiwyNDIuNTU5MTc3IDExOS4yNDM4NzYsMjM4LjU3NDY0MiAxMTAuNTE5MzgxLDIzMS4yODYxOTcgTDExMi4wNTQxNDYsMjMwLjQxNjQ5NiBMMTYzLjcyNDU5NSwyMDAuNTkwODgxIEMxNjYuMzQwNjQ4LDE5OS4wNTY0NDQgMTY3Ljk1NDMyMSwxOTYuMjU2ODE4IDE2Ny45NzA3ODEsMTkzLjIyNDAwNSBMMTY3Ljk3MDc4MSwxMjAuMzczNzg4IEwxODkuODE1NjE0LDEzMy4wMTAwMjYgQzE5MC4wMzQxMzIsMTMzLjEyMTQyMyAxOTAuMTg2MjM1LDEzMy4zMzA1NjQgMTkwLjIyNDg4NSwxMzMuNTcyNzc0IEwxOTAuMjI0ODg1LDE5My45NDAyMjkgQzE5MC4xNjg2MDMsMjIwLjc1ODQyNyAxNjguNDQyMTY2LDI0Mi40ODQ4NjQgMTQxLjYyMzk2OCwyNDIuNTQxMjA3IFogTTM3LjE1NzU3NDksMTk3LjkzMDYyIEMzMS40NTY0OTgsMTg4LjA4NjM1OSAyOS40MDk0ODE4LDE3Ni41NDY5ODQgMzEuMzc2NjIzNywxNjUuMzQyNDI2IEwzMi45MTEzODk1LDE2Ni4yNjMyODUgTDg0LjYzMjk5NzMsMTk2LjA4ODkwMSBDODcuMjM4OTM0OSwxOTcuNjE4MjA3IDkwLjQ2ODI3MTcsMTk3LjYxODIwNyA5My4wNzQyMDkzLDE5Ni4wODg5MDEgTDE1Ni4yNTU0MDIsMTU5LjY2Mzc5MyBMMTU2LjI1NTQwMiwxODQuODg1MTExIEMxNTYuMjQzNTU3LDE4NS4xNDk3NzEgMTU2LjExMTcyNSwxODUuMzk0NjAyIDE1NS44OTcyOSwxODUuNTUwMTc2IEwxMDMuNTYxNzc2LDIxNS43MzM5MDMgQzgwLjMwNTQ5NTMsMjI5LjEzMTYzMiA1MC41OTI0OTU0LDIyMS4xNjU0MzUgMzcuMTU3NTc0OSwxOTcuOTMwNjIgWiBNMjMuNTQ5MzE4MSw4NS4zODExMjczIEMyOS4yODk5ODYxLDc1LjQ3MzMwOTcgMzguMzUxMTkxMSw2Ny45MTYyNjQ4IDQ5LjEyODc0ODIsNjQuMDQ3ODgyNSBMNDkuMTI4NzQ4MiwxMjUuNDM4NTE1IEM0OS4wODkxNDkyLDEyOC40NTk0MjUgNTAuNjk2NTM4NiwxMzEuMjYyNTU2IDUzLjMyMzc3NDgsMTMyLjc1NDIzMiBMMTE2LjE5ODAxNCwxNjkuMDI1ODY0IEw5NC4zNTMxODA4LDE4MS42NjIxMDIgQzk0LjExMzIzMjUsMTgxLjc4OTQzNCA5My44MjU3NDYxLDE4MS43ODk0MzQgOTMuNTg1Nzk3OSwxODEuNjYyMTAyIEw0MS4zNTI2MDE1LDE1MS41Mjk1MzQgQzE4LjE0MTk0MjYsMTM4LjA3NjA5OCAxMC4xODE3NjgxLDEwOC4zODU1NjIgMjMuNTQ5MzE4MSw4NS4xMjUzMzMgTDIzLjU0OTMxODEsODUuMzgxMTI3MyBaIE0yMDMuMDE0NiwxMjcuMDc1NTk4IEwxMzkuOTM1NzI1LDkwLjQ0NTg1NDUgTDE2MS43Mjk0LDc3Ljg2MDc3NDggQzE2MS45NjkzNDgsNzcuNzMzNDQzNCAxNjIuMjU2ODM0LDc3LjczMzQ0MzQgMTYyLjQ5Njc4Myw3Ny44NjA3NzQ4IEwyMTQuNzI5OTc5LDEwOC4wNDQ1MDIgQzIzMS4wMzIzMjksMTE3LjQ1MTc0NyAyNDAuNDM3Mjk0LDEzNS40MjYxMDkgMjM4Ljg3MTUwNCwxNTQuMTgyNzM5IEMyMzcuMzA1NzE0LDE3Mi45MzkzNjggMjI1LjA1MDcxOSwxODkuMTA1NTcyIDIwNy40MTQyNjIsMTk1LjY3OTYzIEwyMDcuNDE0MjYyLDEzNC4yODg5OTggQzIwNy4zMjI1MjEsMTMxLjI3Njg2NyAyMDUuNjUwNjk3LDEyOC41MzU4NTMgMjAzLjAxNDYsMTI3LjA3NTU5OCBaIE0yMjQuNzU3MTE2LDk0LjM4NTA4NjcgTDIyMy4yMjIzNSw5My40NjQyMjcyIEwxNzEuNjAzMDYsNjMuMzgyODE3MyBDMTY4Ljk4MTI5Myw2MS44NDQzNzUxIDE2NS43MzI0NTYsNjEuODQ0Mzc1MSAxNjMuMTEwNjg5LDYzLjM4MjgxNzMgTDk5Ljk4MDY1NTQsOTkuODA3OTI1OSBMOTkuOTgwNjU1NCw3NC41ODY2MDc3IEM5OS45NTMzMDA0LDc0LjMyNTQwODggMTAwLjA3MTA5NSw3NC4wNzAxODY5IDEwMC4yODc2MDksNzMuOTIxNTQyNiBMMTUyLjUyMDgwNSw0My43ODg5NzM4IEMxNjguODYzMDk4LDM0LjM3NDM1MTggMTg5LjE3NDI1NiwzNS4yNTI5MDQzIDIwNC42NDI1NzksNDYuMDQzNDg0MSBDMjIwLjExMDkwMyw1Ni44MzQwNjM4IDIyNy45NDkyNjksNzUuNTkyMzk1OSAyMjQuNzU3MTE2LDk0LjE4MDQ1MTMgTDIyNC43NTcxMTYsOTQuMzg1MDg2NyBaIE04OC4wNjA2NDA5LDEzOS4wOTc5MzEgTDY2LjIxNTgwNzYsMTI2LjUxMjg1MSBDNjUuOTk1MDM5OSwxMjYuMzc5MDkxIDY1Ljg0NTA5NjUsMTI2LjE1NDE3NiA2NS44MDY1MzY3LDEyNS44OTg5NDUgTDY1LjgwNjUzNjcsNjUuNjg0OTY2IEM2NS44MzE0NDk1LDQ2LjgyODUzNjcgNzYuNzUwMDYwNSwyOS42ODQ2MDMyIDkzLjgyNzA4NTIsMjEuNjg4MzA1NSBDMTEwLjkwNDExLDEzLjY5MjAwNzkgMTMxLjA2MzgzMywxNi4yODM1NDYyIDE0NS41NjMyLDI4LjMzODk5OCBMMTQ0LjAyODQzNCwyOS4yMDg2OTg2IEw5Mi4zNTc5ODUyLDU5LjAzNDMxNDIgQzg5Ljc0MTkzMjcsNjAuNTY4NzUxMyA4OC4xMjgyNTk3LDYzLjM2ODM3NjcgODguMTExNzk5OCw2Ni40MDExOTAxIEw4OC4wNjA2NDA5LDEzOS4wOTc5MzEgWiBNOTkuOTI5NDk2NSwxMTMuNTE4NSBMMTI4LjA2Njg3LDk3LjMwMTE0MTcgTDE1Ni4yNTU0MDIsMTEzLjUxODUgTDE1Ni4yNTU0MDIsMTQ1Ljk1MzIxOCBMMTI4LjE2OTE4NywxNjIuMTcwNTc3IEw5OS45ODA2NTU0LDE0NS45NTMyMTggTDk5LjkyOTQ5NjUsMTEzLjUxODUgWiIgZmlsbD0iIzAwMDAwMCI+PC9wYXRoPgogICAgPC9nPgo8L3N2Zz4K">
+      <bpmn:extensionElements>
+        <zeebe:taskDefinition type="io.camunda:http-json:1" />
+        <zeebe:ioMapping>
+          <zeebe:input source="bearer" target="authentication.type" />
+          <zeebe:input source="=&#34;{{secrets.API_OPEN_IA}}&#34;" target="authentication.token" />
+          <zeebe:input source="=if is defined(internal_organization) and internal_organization != null then {&#34;Content-Type&#34;:&#34;application/json&#34;, &#34;OpenAI-Organization&#34;:internal_organization} else {&#34;Content-Type&#34;:&#34;application/json&#34;}" target="headers" />
+          <zeebe:input source="chat" target="operation" />
+          <zeebe:input source="post" target="method" />
+          <zeebe:input source="https://api.openai.com/v1/chat/completions" target="url" />
+          <zeebe:input source="gpt-3.5-turbo" target="internal_model" />
+          <zeebe:input source="1" target="internal_temperature" />
+          <zeebe:input source="=&#34;Quisiera conocer si la solicitud de crédito solicitada por &#34; + nombre + &#34; incurre en fraude crediticio, teniendo en cuenta los siguientes datos: el tipo de crédito solicitado es &#34; + tipoCredito + &#34;, importe solicitado: &#34; + string(importe) + &#34;, score de riesgo: &#34; + string(scoreRiesgo) + &#34;, el ingreso mensual es &#34; + string(ingresosMensuales) + &#34; y los gastos mensuales &#34; + string(gastosMensuales) + &#34;. Necesitaré que respondas estrictamente con el siguiente formato utilizando una, dos o tres de las siguientes palabras separadas por comas. &#39;humano&#39; si se puede recurrir a un experto para inspeccionar la información del crédito. &#39;notifica&#39; si se requiere avisar al cliente que se está realizando la inspección. &#39;fraude&#39; si no cumple con las alternativas anteriores y además observas datos inconsistentes entre las variables.&#34;" target="internal_prompt" />
+          <zeebe:input source="1" target="internal_choices" />
+          <zeebe:input source="=append(concatenate(if is defined(internal_systemMessage) then [{&#34;role&#34;: &#34;system&#34;, &#34;content&#34;: internal_systemMessage}] else [], if is defined(internal_chatHistory) then internal_chatHistory else []), {&#34;role&#34;: &#34;user&#34;, &#34;content&#34;: internal_prompt})" target="internal_messages" />
+          <zeebe:input source="={&#34;model&#34;: if is defined(internal_custom_model) then internal_custom_model else internal_model, &#34;messages&#34;: internal_messages, &#34;n&#34;: number(internal_choices), &#34;temperature&#34;: number(internal_temperature)}" target="body" />
+          <zeebe:input source="30" target="connectionTimeoutInSeconds" />
+        </zeebe:ioMapping>
+        <zeebe:taskHeaders>
+          <zeebe:header key="resultExpression" value="={openAiResponse: response.body.choices[1].message.content}" />
+        </zeebe:taskHeaders>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1evg2dh</bpmn:incoming>
+      <bpmn:outgoing>Flow_1jyq56e</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="Flow_1jyq56e" sourceRef="Activity_14pxdgx" targetRef="Activity_0l3ii80" />
+    <bpmn:sequenceFlow id="Flow_0foqpu5" sourceRef="Activity_0l3ii80" targetRef="Activity_02z0emt" />
+    <bpmn:adHocSubProcess id="Activity_02z0emt" name="Inspeccionar fraude crediticio">
+      <bpmn:extensionElements>
+        <zeebe:adHoc activeElementsCollection="=tareas" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0foqpu5</bpmn:incoming>
+      <bpmn:outgoing>Flow_0hlg1u4</bpmn:outgoing>
+      <bpmn:userTask id="humano" name="Revisar solicitud para inspección">
+        <bpmn:extensionElements>
+          <zeebe:userTask />
+          <zeebe:formDefinition formId="FormRevisarSolicitud" />
+          <zeebe:ioMapping>
+            <zeebe:input source="=nroSolicitud" target="nroSolicitud" />
+            <zeebe:input source="=nombre" target="nombre" />
+            <zeebe:input source="=tipoCredito" target="tipoCredito" />
+            <zeebe:input source="=importe" target="importe" />
+            <zeebe:input source="=scoreRiesgo" target="scoreRiesgo" />
+            <zeebe:input source="=ingresosMensuales" target="ingresosMensuales" />
+            <zeebe:input source="=gastosMensuales" target="gastosMensuales" />
+          </zeebe:ioMapping>
+        </bpmn:extensionElements>
+        <bpmn:outgoing>Flow_0h1qj2c</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:intermediateThrowEvent id="fraude">
+        <bpmn:outgoing>Flow_0hamylp</bpmn:outgoing>
+      </bpmn:intermediateThrowEvent>
+      <bpmn:intermediateThrowEvent id="Event_13krk4y">
+        <bpmn:incoming>Flow_1ueo7x9</bpmn:incoming>
+      </bpmn:intermediateThrowEvent>
+      <bpmn:exclusiveGateway id="Gateway_0hu2qy8" name="¿Requiere información adicional?">
+        <bpmn:incoming>Flow_0h1qj2c</bpmn:incoming>
+        <bpmn:outgoing>Flow_1wftjyz</bpmn:outgoing>
+        <bpmn:outgoing>Flow_12k01by</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:sequenceFlow id="Flow_0h1qj2c" sourceRef="humano" targetRef="Gateway_0hu2qy8" />
+      <bpmn:sequenceFlow id="Flow_1wftjyz" name="si" sourceRef="Gateway_0hu2qy8" targetRef="Gateway_0lha84d">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=informacionAdicional="si"</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:exclusiveGateway id="Gateway_17uup0k" name="¿Solicitud con fraude?">
+        <bpmn:incoming>Flow_0lrj6c9</bpmn:incoming>
+        <bpmn:incoming>Flow_12k01by</bpmn:incoming>
+        <bpmn:outgoing>Flow_0xfn6w3</bpmn:outgoing>
+        <bpmn:outgoing>Flow_0sgj4xp</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:intermediateThrowEvent id="Event_0ibpyp8">
+        <bpmn:incoming>Flow_0xfn6w3</bpmn:incoming>
+      </bpmn:intermediateThrowEvent>
+      <bpmn:sequenceFlow id="Flow_0xfn6w3" name="no" sourceRef="Gateway_17uup0k" targetRef="Event_0ibpyp8">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=solicitudFraude="no"</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="Flow_0sgj4xp" name="si" sourceRef="Gateway_17uup0k" targetRef="Gateway_1rkf1z1">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=solicitudFraude="si"</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:intermediateThrowEvent id="Event_0aduetp">
+        <bpmn:incoming>Flow_1tf9dod</bpmn:incoming>
+        <bpmn:escalationEventDefinition id="EscalationEventDefinition_1tn61yk" escalationRef="Escalation_3l1gcfe" />
+      </bpmn:intermediateThrowEvent>
+      <bpmn:sequenceFlow id="Flow_0r5q8ve" sourceRef="Activity_11mr5bq" targetRef="Event_0aefzku" />
+      <bpmn:intermediateThrowEvent id="Event_0aefzku" name="C">
+        <bpmn:incoming>Flow_0r5q8ve</bpmn:incoming>
+        <bpmn:linkEventDefinition id="LinkEventDefinition_0bxmqyr" name="C" />
+      </bpmn:intermediateThrowEvent>
+      <bpmn:exclusiveGateway id="Gateway_0iusmvq">
+        <bpmn:incoming>Flow_0cgfxj0</bpmn:incoming>
+        <bpmn:outgoing>Flow_0lrj6c9</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:sequenceFlow id="Flow_0lrj6c9" sourceRef="Gateway_0iusmvq" targetRef="Gateway_17uup0k" />
+      <bpmn:intermediateCatchEvent id="Event_0z4509m" name="C">
+        <bpmn:outgoing>Flow_0cgfxj0</bpmn:outgoing>
+        <bpmn:linkEventDefinition id="LinkEventDefinition_0tppmpk" name="C" />
+      </bpmn:intermediateCatchEvent>
+      <bpmn:sequenceFlow id="Flow_0cgfxj0" sourceRef="Event_0z4509m" targetRef="Gateway_0iusmvq" />
+      <bpmn:exclusiveGateway id="Gateway_1rkf1z1">
+        <bpmn:incoming>Flow_0sgj4xp</bpmn:incoming>
+        <bpmn:incoming>Flow_0hamylp</bpmn:incoming>
+        <bpmn:outgoing>Flow_1tf9dod</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:sequenceFlow id="Flow_1tf9dod" sourceRef="Gateway_1rkf1z1" targetRef="Event_0aduetp" />
+      <bpmn:sequenceFlow id="Flow_0hamylp" sourceRef="fraude" targetRef="Gateway_1rkf1z1" />
+      <bpmn:eventBasedGateway id="Gateway_0lha84d">
+        <bpmn:incoming>Flow_1wftjyz</bpmn:incoming>
+        <bpmn:outgoing>Flow_0qk7g03</bpmn:outgoing>
+        <bpmn:outgoing>Flow_12kn3bd</bpmn:outgoing>
+      </bpmn:eventBasedGateway>
+      <bpmn:intermediateCatchEvent id="Event_02fqk4b" name="x tiempo">
+        <bpmn:incoming>Flow_0qk7g03</bpmn:incoming>
+        <bpmn:outgoing>Flow_10amy8s</bpmn:outgoing>
+        <bpmn:timerEventDefinition id="TimerEventDefinition_1br1w6z">
+          <bpmn:timeDuration xsi:type="bpmn:tFormalExpression">P2D</bpmn:timeDuration>
+        </bpmn:timerEventDefinition>
+      </bpmn:intermediateCatchEvent>
+      <bpmn:sequenceFlow id="Flow_0qk7g03" sourceRef="Gateway_0lha84d" targetRef="Event_02fqk4b" />
+      <bpmn:exclusiveGateway id="Gateway_0v5nevb">
+        <bpmn:incoming>Flow_10amy8s</bpmn:incoming>
+        <bpmn:incoming>Flow_1r9yavo</bpmn:incoming>
+        <bpmn:outgoing>Flow_1v68zvk</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:sequenceFlow id="Flow_10amy8s" sourceRef="Event_02fqk4b" targetRef="Gateway_0v5nevb" />
+      <bpmn:sequenceFlow id="Flow_1v68zvk" sourceRef="Gateway_0v5nevb" targetRef="Activity_11mr5bq" />
+      <bpmn:sequenceFlow id="Flow_12k01by" name="no" sourceRef="Gateway_0hu2qy8" targetRef="Gateway_17uup0k">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=informacionAdicional="no"</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="Flow_1ueo7x9" sourceRef="notifica" targetRef="Event_13krk4y" />
+      <bpmn:sequenceFlow id="Flow_12kn3bd" sourceRef="Gateway_0lha84d" targetRef="Event_0kdpp3l" />
+      <bpmn:sequenceFlow id="Flow_1r9yavo" sourceRef="Event_0kdpp3l" targetRef="Gateway_0v5nevb" />
+      <bpmn:scriptTask id="notifica" name="Notificar al cliente">
+        <bpmn:extensionElements>
+          <zeebe:script expression="=&#34;Notificar la inspección de la solicitud del cliente&#34; + nombre" resultVariable="resultadoNotificacion" />
+        </bpmn:extensionElements>
+        <bpmn:outgoing>Flow_1ueo7x9</bpmn:outgoing>
+      </bpmn:scriptTask>
+      <bpmn:intermediateCatchEvent id="Event_0kdpp3l" name="Información adicional recepcionada" zeebe:modelerTemplate="io.camunda.connectors.webhook.WebhookConnectorIntermediate.v1" zeebe:modelerTemplateVersion="11" zeebe:modelerTemplateIcon="data:image/svg+xml;base64,PHN2ZyBpZD0naWNvbicgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB3aWR0aD0nMTgnIGhlaWdodD0nMTgnIHZpZXdCb3g9JzAgMCAzMiAzMic+CiAgPGRlZnM+CiAgICA8c3R5bGU+LmNscy0xIHsgZmlsbDogbm9uZTsgfTwvc3R5bGU+CiAgPC9kZWZzPgogIDxwYXRoCiAgICBkPSdNMjQsMjZhMywzLDAsMSwwLTIuODE2NC00SDEzdjFhNSw1LDAsMSwxLTUtNVYxNmE3LDcsMCwxLDAsNi45Mjg3LDhoNi4yNTQ5QTIuOTkxNCwyLjk5MTQsMCwwLDAsMjQsMjZaJy8+CiAgPHBhdGgKICAgIGQ9J00yNCwxNmE3LjAyNCw3LjAyNCwwLDAsMC0yLjU3LjQ4NzNsLTMuMTY1Ni01LjUzOTVhMy4wNDY5LDMuMDQ2OSwwLDEsMC0xLjczMjYuOTk4NWw0LjExODksNy4yMDg1Ljg2ODYtLjQ5NzZhNS4wMDA2LDUuMDAwNiwwLDEsMS0xLjg1MSw2Ljg0MThMMTcuOTM3LDI2LjUwMUE3LjAwMDUsNy4wMDA1LDAsMSwwLDI0LDE2WicvPgogIDxwYXRoCiAgICBkPSdNOC41MzIsMjAuMDUzN2EzLjAzLDMuMDMsMCwxLDAsMS43MzI2Ljk5ODVDMTEuNzQsMTguNDcsMTMuODYsMTQuNzYwNywxMy44OSwxNC43MDhsLjQ5NzYtLjg2ODItLjg2NzctLjQ5N2E1LDUsMCwxLDEsNi44MTItMS44NDM4bDEuNzMxNSwxLjAwMmE3LjAwMDgsNy4wMDA4LDAsMSwwLTEwLjM0NjIsMi4wMzU2Yy0uNDU3Ljc0MjctMS4xMDIxLDEuODcxNi0yLjA3MzcsMy41NzI4WicvPgogIDxyZWN0IGlkPSdfVHJhbnNwYXJlbnRfUmVjdGFuZ2xlXycgZGF0YS1uYW1lPScmbHQ7VHJhbnNwYXJlbnQgUmVjdGFuZ2xlJmd0OycgY2xhc3M9J2Nscy0xJwogICAgd2lkdGg9JzMyJyBoZWlnaHQ9JzMyJy8+Cjwvc3ZnPg==">
+        <bpmn:extensionElements>
+          <zeebe:properties>
+            <zeebe:property name="inbound.type" value="io.camunda:webhook:1" />
+            <zeebe:property name="inbound.method" value="any" />
+            <zeebe:property name="inbound.context" value="d9773a54-d9bf-429b-98a0-bf6131b212e7" />
+            <zeebe:property name="inbound.shouldValidateHmac" value="disabled" />
+            <zeebe:property name="inbound.auth.type" value="NONE" />
+            <zeebe:property name="consumeUnmatchedEvents" value="true" />
+            <zeebe:property name="correlationKeyExpression" value="=request.body.nroSolicitud" />
+            <zeebe:property name="resultVariable" value="" />
+            <zeebe:property name="resultExpression" value="={comentariosAdicionales: request.body.comentarios}" />
+          </zeebe:properties>
+        </bpmn:extensionElements>
+        <bpmn:incoming>Flow_12kn3bd</bpmn:incoming>
+        <bpmn:outgoing>Flow_1r9yavo</bpmn:outgoing>
+        <bpmn:messageEventDefinition id="MessageEventDefinition_11eyxs5" messageRef="Message_0oi0aee" />
+      </bpmn:intermediateCatchEvent>
+      <bpmn:serviceTask id="Activity_11mr5bq" name="Determinar fraude crediticio" zeebe:modelerTemplate="io.camunda.connectors.OpenAI.v1" zeebe:modelerTemplateVersion="5" zeebe:modelerTemplateIcon="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjU2cHgiIGhlaWdodD0iMjYwcHgiIHZpZXdCb3g9IjAgMCAyNTYgMjYwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIj4KICAgIDx0aXRsZT5PcGVuQUk8L3RpdGxlPgogICAgPGc+CiAgICAgICAgPHBhdGggZD0iTTIzOS4xODM5MTQsMTA2LjIwMjc4MyBDMjQ1LjA1NDMwNCw4OC41MjQyMDk2IDI0My4wMjIyOCw2OS4xNzMzODA1IDIzMy42MDc1OTksNTMuMDk5ODg2NCBDMjE5LjQ1MTY3OCwyOC40NTg4MDIxIDE5MC45OTk3MDMsMTUuNzgzNjEyOSAxNjMuMjEzMDA3LDIxLjczOTUwNSBDMTQ3LjU1NDA3Nyw0LjMyMTQ1ODgzIDEyMy43OTQ5MDksLTMuNDIzOTg1NTQgMTAwLjg3OTAxLDEuNDE4NzM4OTggQzc3Ljk2MzExMDUsNi4yNjE0NjM0OSA1OS4zNjkwMDkzLDIyLjk1NzI1MzYgNTIuMDk1OTYyMSw0NS4yMjE0MjE5IEMzMy44NDM2NDk0LDQ4Ljk2NDQ4NjcgMTguMDkwMTcyMSw2MC4zOTI3NDkgOC44NjY3MjUxMyw3Ni41ODE4MDMzIEMtNS40NDM0OTEsMTAxLjE4Mjk2MiAtMi4xOTU0NDQzMSwxMzIuMjE1MjU1IDE2Ljg5ODY2NjIsMTUzLjMyMDA5NCBDMTEuMDA2MDg2NSwxNzAuOTkwNjU2IDEzLjAxOTcyODMsMTkwLjM0Mzk5MSAyMi40MjM4MjMxLDIwNi40MjI5OTEgQzM2LjU5NzU1NTMsMjMxLjA3MjM0NCA2NS4wNjgwMzQyLDI0My43NDY1NjYgOTIuODY5NTczOCwyMzcuNzgzMzcyIEMxMDUuMjM1NjM5LDI1MS43MDgyNDkgMTIzLjAwMTExMywyNTkuNjMwOTQyIDE0MS42MjM5NjgsMjU5LjUyNjkyIEMxNzAuMTA1MzU5LDI1OS41NTIxNjkgMTk1LjMzNzYxMSwyNDEuMTY1NzE4IDIwNC4wMzc3NzcsMjE0LjA0NTY2MSBDMjIyLjI4NzM0LDIxMC4yOTYzNTYgMjM4LjAzODQ4OSwxOTguODY5NzgzIDI0Ny4yNjcwMTQsMTgyLjY4NTI4IEMyNjEuNDA0NDUzLDE1OC4xMjc1MTUgMjU4LjE0MjQ5NCwxMjcuMjYyNzc1IDIzOS4xODM5MTQsMTA2LjIwMjc4MyBMMjM5LjE4MzkxNCwxMDYuMjAyNzgzIFogTTE0MS42MjM5NjgsMjQyLjU0MTIwNyBDMTMwLjI1NTY4MiwyNDIuNTU5MTc3IDExOS4yNDM4NzYsMjM4LjU3NDY0MiAxMTAuNTE5MzgxLDIzMS4yODYxOTcgTDExMi4wNTQxNDYsMjMwLjQxNjQ5NiBMMTYzLjcyNDU5NSwyMDAuNTkwODgxIEMxNjYuMzQwNjQ4LDE5OS4wNTY0NDQgMTY3Ljk1NDMyMSwxOTYuMjU2ODE4IDE2Ny45NzA3ODEsMTkzLjIyNDAwNSBMMTY3Ljk3MDc4MSwxMjAuMzczNzg4IEwxODkuODE1NjE0LDEzMy4wMTAwMjYgQzE5MC4wMzQxMzIsMTMzLjEyMTQyMyAxOTAuMTg2MjM1LDEzMy4zMzA1NjQgMTkwLjIyNDg4NSwxMzMuNTcyNzc0IEwxOTAuMjI0ODg1LDE5My45NDAyMjkgQzE5MC4xNjg2MDMsMjIwLjc1ODQyNyAxNjguNDQyMTY2LDI0Mi40ODQ4NjQgMTQxLjYyMzk2OCwyNDIuNTQxMjA3IFogTTM3LjE1NzU3NDksMTk3LjkzMDYyIEMzMS40NTY0OTgsMTg4LjA4NjM1OSAyOS40MDk0ODE4LDE3Ni41NDY5ODQgMzEuMzc2NjIzNywxNjUuMzQyNDI2IEwzMi45MTEzODk1LDE2Ni4yNjMyODUgTDg0LjYzMjk5NzMsMTk2LjA4ODkwMSBDODcuMjM4OTM0OSwxOTcuNjE4MjA3IDkwLjQ2ODI3MTcsMTk3LjYxODIwNyA5My4wNzQyMDkzLDE5Ni4wODg5MDEgTDE1Ni4yNTU0MDIsMTU5LjY2Mzc5MyBMMTU2LjI1NTQwMiwxODQuODg1MTExIEMxNTYuMjQzNTU3LDE4NS4xNDk3NzEgMTU2LjExMTcyNSwxODUuMzk0NjAyIDE1NS44OTcyOSwxODUuNTUwMTc2IEwxMDMuNTYxNzc2LDIxNS43MzM5MDMgQzgwLjMwNTQ5NTMsMjI5LjEzMTYzMiA1MC41OTI0OTU0LDIyMS4xNjU0MzUgMzcuMTU3NTc0OSwxOTcuOTMwNjIgWiBNMjMuNTQ5MzE4MSw4NS4zODExMjczIEMyOS4yODk5ODYxLDc1LjQ3MzMwOTcgMzguMzUxMTkxMSw2Ny45MTYyNjQ4IDQ5LjEyODc0ODIsNjQuMDQ3ODgyNSBMNDkuMTI4NzQ4MiwxMjUuNDM4NTE1IEM0OS4wODkxNDkyLDEyOC40NTk0MjUgNTAuNjk2NTM4NiwxMzEuMjYyNTU2IDUzLjMyMzc3NDgsMTMyLjc1NDIzMiBMMTE2LjE5ODAxNCwxNjkuMDI1ODY0IEw5NC4zNTMxODA4LDE4MS42NjIxMDIgQzk0LjExMzIzMjUsMTgxLjc4OTQzNCA5My44MjU3NDYxLDE4MS43ODk0MzQgOTMuNTg1Nzk3OSwxODEuNjYyMTAyIEw0MS4zNTI2MDE1LDE1MS41Mjk1MzQgQzE4LjE0MTk0MjYsMTM4LjA3NjA5OCAxMC4xODE3NjgxLDEwOC4zODU1NjIgMjMuNTQ5MzE4MSw4NS4xMjUzMzMgTDIzLjU0OTMxODEsODUuMzgxMTI3MyBaIE0yMDMuMDE0NiwxMjcuMDc1NTk4IEwxMzkuOTM1NzI1LDkwLjQ0NTg1NDUgTDE2MS43Mjk0LDc3Ljg2MDc3NDggQzE2MS45NjkzNDgsNzcuNzMzNDQzNCAxNjIuMjU2ODM0LDc3LjczMzQ0MzQgMTYyLjQ5Njc4Myw3Ny44NjA3NzQ4IEwyMTQuNzI5OTc5LDEwOC4wNDQ1MDIgQzIzMS4wMzIzMjksMTE3LjQ1MTc0NyAyNDAuNDM3Mjk0LDEzNS40MjYxMDkgMjM4Ljg3MTUwNCwxNTQuMTgyNzM5IEMyMzcuMzA1NzE0LDE3Mi45MzkzNjggMjI1LjA1MDcxOSwxODkuMTA1NTcyIDIwNy40MTQyNjIsMTk1LjY3OTYzIEwyMDcuNDE0MjYyLDEzNC4yODg5OTggQzIwNy4zMjI1MjEsMTMxLjI3Njg2NyAyMDUuNjUwNjk3LDEyOC41MzU4NTMgMjAzLjAxNDYsMTI3LjA3NTU5OCBaIE0yMjQuNzU3MTE2LDk0LjM4NTA4NjcgTDIyMy4yMjIzNSw5My40NjQyMjcyIEwxNzEuNjAzMDYsNjMuMzgyODE3MyBDMTY4Ljk4MTI5Myw2MS44NDQzNzUxIDE2NS43MzI0NTYsNjEuODQ0Mzc1MSAxNjMuMTEwNjg5LDYzLjM4MjgxNzMgTDk5Ljk4MDY1NTQsOTkuODA3OTI1OSBMOTkuOTgwNjU1NCw3NC41ODY2MDc3IEM5OS45NTMzMDA0LDc0LjMyNTQwODggMTAwLjA3MTA5NSw3NC4wNzAxODY5IDEwMC4yODc2MDksNzMuOTIxNTQyNiBMMTUyLjUyMDgwNSw0My43ODg5NzM4IEMxNjguODYzMDk4LDM0LjM3NDM1MTggMTg5LjE3NDI1NiwzNS4yNTI5MDQzIDIwNC42NDI1NzksNDYuMDQzNDg0MSBDMjIwLjExMDkwMyw1Ni44MzQwNjM4IDIyNy45NDkyNjksNzUuNTkyMzk1OSAyMjQuNzU3MTE2LDk0LjE4MDQ1MTMgTDIyNC43NTcxMTYsOTQuMzg1MDg2NyBaIE04OC4wNjA2NDA5LDEzOS4wOTc5MzEgTDY2LjIxNTgwNzYsMTI2LjUxMjg1MSBDNjUuOTk1MDM5OSwxMjYuMzc5MDkxIDY1Ljg0NTA5NjUsMTI2LjE1NDE3NiA2NS44MDY1MzY3LDEyNS44OTg5NDUgTDY1LjgwNjUzNjcsNjUuNjg0OTY2IEM2NS44MzE0NDk1LDQ2LjgyODUzNjcgNzYuNzUwMDYwNSwyOS42ODQ2MDMyIDkzLjgyNzA4NTIsMjEuNjg4MzA1NSBDMTEwLjkwNDExLDEzLjY5MjAwNzkgMTMxLjA2MzgzMywxNi4yODM1NDYyIDE0NS41NjMyLDI4LjMzODk5OCBMMTQ0LjAyODQzNCwyOS4yMDg2OTg2IEw5Mi4zNTc5ODUyLDU5LjAzNDMxNDIgQzg5Ljc0MTkzMjcsNjAuNTY4NzUxMyA4OC4xMjgyNTk3LDYzLjM2ODM3NjcgODguMTExNzk5OCw2Ni40MDExOTAxIEw4OC4wNjA2NDA5LDEzOS4wOTc5MzEgWiBNOTkuOTI5NDk2NSwxMTMuNTE4NSBMMTI4LjA2Njg3LDk3LjMwMTE0MTcgTDE1Ni4yNTU0MDIsMTEzLjUxODUgTDE1Ni4yNTU0MDIsMTQ1Ljk1MzIxOCBMMTI4LjE2OTE4NywxNjIuMTcwNTc3IEw5OS45ODA2NTU0LDE0NS45NTMyMTggTDk5LjkyOTQ5NjUsMTEzLjUxODUgWiIgZmlsbD0iIzAwMDAwMCI+PC9wYXRoPgogICAgPC9nPgo8L3N2Zz4K">
+        <bpmn:extensionElements>
+          <zeebe:taskDefinition type="io.camunda:http-json:1" />
+          <zeebe:ioMapping>
+            <zeebe:input source="bearer" target="authentication.type" />
+            <zeebe:input source="=&#34;{{secrets.API_OPEN_IA}}&#34;" target="authentication.token" />
+            <zeebe:input source="=if is defined(internal_organization) and internal_organization != null then {&#34;Content-Type&#34;:&#34;application/json&#34;, &#34;OpenAI-Organization&#34;:internal_organization} else {&#34;Content-Type&#34;:&#34;application/json&#34;}" target="headers" />
+            <zeebe:input source="chat" target="operation" />
+            <zeebe:input source="post" target="method" />
+            <zeebe:input source="https://api.openai.com/v1/chat/completions" target="url" />
+            <zeebe:input source="gpt-3.5-turbo" target="internal_model" />
+            <zeebe:input source="1" target="internal_temperature" />
+            <zeebe:input source="=&#34;Quisiera conocer si la solicitud de crédito solicitada por &#34; + nombre + &#34; incurre en fraude crediticio, teniendo en cuenta los siguientes datos: el tipo de credito solicitado es:  &#34; + tipoCredito + &#34; importe solicitado: &#34; + string(importe) + &#34; score de riesgo: &#34; + string(scoreRiesgo)  + &#34; el ingreso mensual es:  &#34; + string(ingresosMensuales) +  &#34; con gastos mensuales &#34; + string(gastosMensuales) + &#34; Con la información adicional proporcionada &#34; + comentariosAdicionales + &#34; necesitaré que respondas estrictamente con el siguiente formato en minúscula la palabra &#39;si&#39; cuando consideres fraude crediticio&#39;, caso contrario establece la palabra &#39;no&#39; &#34;" target="internal_prompt" />
+            <zeebe:input source="1" target="internal_choices" />
+            <zeebe:input source="=append(concatenate(if is defined(internal_systemMessage) then [{&#34;role&#34;: &#34;system&#34;, &#34;content&#34;: internal_systemMessage}] else [], if is defined(internal_chatHistory) then internal_chatHistory else []), {&#34;role&#34;: &#34;user&#34;, &#34;content&#34;: internal_prompt})" target="internal_messages" />
+            <zeebe:input source="={&#34;model&#34;: if is defined(internal_custom_model) then internal_custom_model else internal_model, &#34;messages&#34;: internal_messages, &#34;n&#34;: number(internal_choices), &#34;temperature&#34;: number(internal_temperature)}" target="body" />
+            <zeebe:input source="30" target="connectionTimeoutInSeconds" />
+          </zeebe:ioMapping>
+          <zeebe:taskHeaders>
+            <zeebe:header key="resultExpression" value="={solicitudFraude: response.body.choices[1].message.content}" />
+          </zeebe:taskHeaders>
+        </bpmn:extensionElements>
+        <bpmn:incoming>Flow_1v68zvk</bpmn:incoming>
+        <bpmn:outgoing>Flow_0r5q8ve</bpmn:outgoing>
+      </bpmn:serviceTask>
+    </bpmn:adHocSubProcess>
+    <bpmn:boundaryEvent id="Event_0r3732y" attachedToRef="Activity_02z0emt">
+      <bpmn:outgoing>Flow_18akmwq</bpmn:outgoing>
+      <bpmn:escalationEventDefinition id="EscalationEventDefinition_00pikkp" escalationRef="Escalation_3l1gcfe" />
+    </bpmn:boundaryEvent>
+    <bpmn:endEvent id="Event_0ae6bq6">
+      <bpmn:incoming>Flow_18akmwq</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_18akmwq" sourceRef="Event_0r3732y" targetRef="Event_0ae6bq6" />
+    <bpmn:endEvent id="Event_1ebyyry">
+      <bpmn:incoming>Flow_0hlg1u4</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0hlg1u4" sourceRef="Activity_02z0emt" targetRef="Event_1ebyyry" />
+    <bpmn:scriptTask id="Activity_0l3ii80" name="Estandarizar variable Agente IA">
+      <bpmn:extensionElements>
+        <zeebe:script expression="=split(openAiResponse, &#34;, &#34;)" resultVariable="tareas" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1jyq56e</bpmn:incoming>
+      <bpmn:outgoing>Flow_0foqpu5</bpmn:outgoing>
+    </bpmn:scriptTask>
+  </bpmn:process>
+  <bpmn:escalation id="Escalation_3l1gcfe" name="escaladoCancelacion" escalationCode="100" />
+  <bpmn:message id="Message_0oi0aee" name="64a39b14-0c0f-4178-bdd7-266396f54009" zeebe:modelerTemplate="io.camunda.connectors.webhook.WebhookConnectorIntermediate.v1">
+    <bpmn:extensionElements>
+      <zeebe:subscription correlationKey="=nroSolicitud" />
+    </bpmn:extensionElements>
+  </bpmn:message>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="MyFirstAgenteIA">
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="150" y="150" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0ccvgtp_di" bpmnElement="Activity_14pxdgx">
+        <dc:Bounds x="240" y="128" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1rjf9ef_di" bpmnElement="Activity_02z0emt" isExpanded="true">
+        <dc:Bounds x="605" y="-90" width="985" height="670" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0qn4ybw_di" bpmnElement="humano">
+        <dc:Bounds x="670" y="110" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0qak0m3_di" bpmnElement="fraude">
+        <dc:Bounds x="692" y="482" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_13krk4y_di" bpmnElement="Event_13krk4y">
+        <dc:Bounds x="822" y="-38" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0hu2qy8_di" bpmnElement="Gateway_0hu2qy8" isMarkerVisible="true">
+        <dc:Bounds x="825" y="125" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="820" y="75" width="60" height="40" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_17uup0k_di" bpmnElement="Gateway_17uup0k" isMarkerVisible="true">
+        <dc:Bounds x="825" y="325" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="814.5" y="375.5" width="73" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0ibpyp8_di" bpmnElement="Event_0ibpyp8">
+        <dc:Bounds x="992" y="332" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1pxwcun_di" bpmnElement="Event_0aduetp">
+        <dc:Bounds x="992" y="482" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1oi5vg7_di" bpmnElement="Event_0aefzku">
+        <dc:Bounds x="1472" y="132" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1486" y="175" width="8" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0iusmvq_di" bpmnElement="Gateway_0iusmvq" isMarkerVisible="true">
+        <dc:Bounds x="725" y="325" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1f8q932_di" bpmnElement="Event_0z4509m">
+        <dc:Bounds x="732" y="242" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="746" y="212" width="8" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1rkf1z1_di" bpmnElement="Gateway_1rkf1z1" isMarkerVisible="true">
+        <dc:Bounds x="825" y="475" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1iim3gi_di" bpmnElement="Gateway_0lha84d">
+        <dc:Bounds x="965" y="125" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_02fqk4b_di" bpmnElement="Event_02fqk4b">
+        <dc:Bounds x="1072" y="242" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1069" y="285" width="42" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0v5nevb_di" bpmnElement="Gateway_0v5nevb" isMarkerVisible="true">
+        <dc:Bounds x="1165" y="125" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0csldem_di" bpmnElement="notifica">
+        <dc:Bounds x="670" y="-60" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0er1v5m_di" bpmnElement="Event_0kdpp3l">
+        <dc:Bounds x="1072" y="132" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1057" y="175" width="67" height="40" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1o6ewai_di" bpmnElement="Activity_11mr5bq">
+        <dc:Bounds x="1290" y="110" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_0h1qj2c_di" bpmnElement="Flow_0h1qj2c">
+        <di:waypoint x="770" y="150" />
+        <di:waypoint x="825" y="150" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1wftjyz_di" bpmnElement="Flow_1wftjyz">
+        <di:waypoint x="875" y="150" />
+        <di:waypoint x="965" y="150" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="898" y="132" width="8" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0xfn6w3_di" bpmnElement="Flow_0xfn6w3">
+        <di:waypoint x="875" y="350" />
+        <di:waypoint x="992" y="350" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="927" y="332" width="13" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0sgj4xp_di" bpmnElement="Flow_0sgj4xp">
+        <di:waypoint x="850" y="375" />
+        <di:waypoint x="850" y="475" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="861" y="424" width="8" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0r5q8ve_di" bpmnElement="Flow_0r5q8ve">
+        <di:waypoint x="1390" y="150" />
+        <di:waypoint x="1472" y="150" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0lrj6c9_di" bpmnElement="Flow_0lrj6c9">
+        <di:waypoint x="775" y="350" />
+        <di:waypoint x="825" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0cgfxj0_di" bpmnElement="Flow_0cgfxj0">
+        <di:waypoint x="750" y="278" />
+        <di:waypoint x="750" y="325" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1tf9dod_di" bpmnElement="Flow_1tf9dod">
+        <di:waypoint x="875" y="500" />
+        <di:waypoint x="992" y="500" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0hamylp_di" bpmnElement="Flow_0hamylp">
+        <di:waypoint x="728" y="500" />
+        <di:waypoint x="825" y="500" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0qk7g03_di" bpmnElement="Flow_0qk7g03">
+        <di:waypoint x="990" y="175" />
+        <di:waypoint x="990" y="260" />
+        <di:waypoint x="1072" y="260" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_10amy8s_di" bpmnElement="Flow_10amy8s">
+        <di:waypoint x="1108" y="260" />
+        <di:waypoint x="1190" y="260" />
+        <di:waypoint x="1190" y="175" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1v68zvk_di" bpmnElement="Flow_1v68zvk">
+        <di:waypoint x="1215" y="150" />
+        <di:waypoint x="1290" y="150" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_12k01by_di" bpmnElement="Flow_12k01by">
+        <di:waypoint x="850" y="175" />
+        <di:waypoint x="850" y="325" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="873" y="202" width="13" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ueo7x9_di" bpmnElement="Flow_1ueo7x9">
+        <di:waypoint x="770" y="-20" />
+        <di:waypoint x="822" y="-20" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_12kn3bd_di" bpmnElement="Flow_12kn3bd">
+        <di:waypoint x="1015" y="150" />
+        <di:waypoint x="1072" y="150" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1r9yavo_di" bpmnElement="Flow_1r9yavo">
+        <di:waypoint x="1108" y="150" />
+        <di:waypoint x="1165" y="150" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Event_0ae6bq6_di" bpmnElement="Event_0ae6bq6">
+        <dc:Bounds x="942" y="652" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1ebyyry_di" bpmnElement="Event_1ebyyry">
+        <dc:Bounds x="1712" y="177" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1bwsl35_di" bpmnElement="Activity_0l3ii80">
+        <dc:Bounds x="400" y="128" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0qnvg2y_di" bpmnElement="Event_0r3732y">
+        <dc:Bounds x="752" y="562" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1evg2dh_di" bpmnElement="Flow_1evg2dh">
+        <di:waypoint x="186" y="168" />
+        <di:waypoint x="240" y="168" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1jyq56e_di" bpmnElement="Flow_1jyq56e">
+        <di:waypoint x="340" y="168" />
+        <di:waypoint x="400" y="168" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0foqpu5_di" bpmnElement="Flow_0foqpu5">
+        <di:waypoint x="500" y="168" />
+        <di:waypoint x="605" y="168" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_18akmwq_di" bpmnElement="Flow_18akmwq">
+        <di:waypoint x="770" y="598" />
+        <di:waypoint x="770" y="670" />
+        <di:waypoint x="942" y="670" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0hlg1u4_di" bpmnElement="Flow_0hlg1u4">
+        <di:waypoint x="1590" y="195" />
+        <di:waypoint x="1712" y="195" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

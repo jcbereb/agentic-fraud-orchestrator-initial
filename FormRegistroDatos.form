@@ -1,0 +1,114 @@
+{
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.6.0",
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "fcfe216"
+  },
+  "schemaVersion": 18,
+  "id": "FormRegistroDatos",
+  "components": [
+    {
+      "text": "## Registro de Datos",
+      "type": "text",
+      "layout": {
+        "row": "Row_0exnz3e",
+        "columns": null
+      },
+      "id": "Field_0y3wcmz"
+    },
+    {
+      "label": "Datos",
+      "components": [
+        {
+          "label": "Nro Solicitud",
+          "type": "textfield",
+          "layout": {
+            "row": "Row_1lccvuk",
+            "columns": null
+          },
+          "id": "Field_12bmzje",
+          "key": "nroSolicitud"
+        },
+        {
+          "label": "Nombre",
+          "type": "textfield",
+          "layout": {
+            "row": "Row_1lccvuk",
+            "columns": null
+          },
+          "id": "Field_0w6vs1e",
+          "key": "nombre"
+        },
+        {
+          "label": "Tipo Crédito",
+          "values": [
+            {
+              "label": "Vehicular",
+              "value": "vehicular"
+            },
+            {
+              "label": "Hipotecario",
+              "value": "hipotecario"
+            }
+          ],
+          "type": "select",
+          "layout": {
+            "row": "Row_0f6fefg",
+            "columns": null
+          },
+          "id": "Field_02gt13f",
+          "key": "tipoCredito"
+        },
+        {
+          "label": "Importe",
+          "type": "number",
+          "layout": {
+            "row": "Row_0f6fefg",
+            "columns": null
+          },
+          "id": "Field_1pabb30",
+          "key": "importe"
+        },
+        {
+          "label": "Score Riesgo",
+          "type": "number",
+          "layout": {
+            "row": "Row_0f6fefg",
+            "columns": null
+          },
+          "id": "Field_04qe6t5",
+          "key": "scoreRiesgo"
+        },
+        {
+          "label": "Ingresos Mensuales",
+          "type": "number",
+          "layout": {
+            "row": "Row_0i8y06p",
+            "columns": null
+          },
+          "id": "Field_1tp8dk9",
+          "key": "ingresosMensuales"
+        },
+        {
+          "label": "Gastos Mensuales",
+          "type": "number",
+          "layout": {
+            "row": "Row_0i8y06p",
+            "columns": null
+          },
+          "id": "Field_1g7jy2f",
+          "key": "gastosMensuales"
+        }
+      ],
+      "showOutline": true,
+      "type": "group",
+      "layout": {
+        "row": "Row_0tscy0o",
+        "columns": null
+      },
+      "id": "Field_1wyhsxu"
+    }
+  ],
+  "type": "default"
+}

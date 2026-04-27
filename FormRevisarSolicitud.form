@@ -1,0 +1,176 @@
+{
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.6.0",
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "fcfe216"
+  },
+  "schemaVersion": 18,
+  "id": "FormRevisarSolicitud",
+  "components": [
+    {
+      "text": "## Revisar Solicitud",
+      "type": "text",
+      "layout": {
+        "row": "Row_0exnz3e",
+        "columns": null
+      },
+      "id": "Field_0y3wcmz"
+    },
+    {
+      "label": "Datos",
+      "components": [
+        {
+          "label": "Nro Solicitud",
+          "type": "textfield",
+          "layout": {
+            "row": "Row_1lccvuk",
+            "columns": null
+          },
+          "id": "Field_12bmzje",
+          "key": "nroSolicitud",
+          "readonly": true
+        },
+        {
+          "label": "Nombre",
+          "type": "textfield",
+          "layout": {
+            "row": "Row_1lccvuk",
+            "columns": null
+          },
+          "id": "Field_0w6vs1e",
+          "key": "nombre",
+          "readonly": true
+        },
+        {
+          "label": "Tipo Crédito",
+          "values": [
+            {
+              "label": "Vehicular",
+              "value": "vehicular"
+            },
+            {
+              "label": "Hipotecario",
+              "value": "hipotecario"
+            }
+          ],
+          "type": "select",
+          "layout": {
+            "row": "Row_0f6fefg",
+            "columns": null
+          },
+          "id": "Field_02gt13f",
+          "key": "tipoCredito",
+          "readonly": true
+        },
+        {
+          "label": "Importe",
+          "type": "number",
+          "layout": {
+            "row": "Row_0f6fefg",
+            "columns": null
+          },
+          "id": "Field_1pabb30",
+          "key": "importe",
+          "readonly": true
+        },
+        {
+          "label": "Score Riesgo",
+          "type": "number",
+          "layout": {
+            "row": "Row_0f6fefg",
+            "columns": null
+          },
+          "id": "Field_04qe6t5",
+          "key": "scoreRiesgo",
+          "readonly": true
+        },
+        {
+          "label": "Ingresos Mensuales",
+          "type": "number",
+          "layout": {
+            "row": "Row_0i8y06p",
+            "columns": null
+          },
+          "id": "Field_1tp8dk9",
+          "key": "ingresosMensuales",
+          "readonly": true
+        },
+        {
+          "label": "Gastos Mensuales",
+          "type": "number",
+          "layout": {
+            "row": "Row_0i8y06p",
+            "columns": null
+          },
+          "id": "Field_1g7jy2f",
+          "key": "gastosMensuales",
+          "readonly": "on"
+        }
+      ],
+      "showOutline": true,
+      "type": "group",
+      "layout": {
+        "row": "Row_0tscy0o",
+        "columns": null
+      },
+      "id": "Field_1wyhsxu"
+    },
+    {
+      "label": "Atención Solicitud",
+      "components": [
+        {
+          "label": "¿Requiere información adicional?",
+          "values": [
+            {
+              "label": "Si",
+              "value": "si"
+            },
+            {
+              "label": "No",
+              "value": "no"
+            }
+          ],
+          "type": "radio",
+          "layout": {
+            "row": "Row_046mlst",
+            "columns": null
+          },
+          "id": "Field_00sy8lj",
+          "key": "informacionAdicional"
+        },
+        {
+          "label": "¿Solicitud con Fraude?",
+          "values": [
+            {
+              "label": "Si",
+              "value": "si"
+            },
+            {
+              "label": "No",
+              "value": "no"
+            }
+          ],
+          "type": "radio",
+          "layout": {
+            "row": "Row_1gx1095",
+            "columns": null
+          },
+          "id": "Field_0r6542x",
+          "key": "solicitudFraude",
+          "conditional": {
+            "hide": "=informacionAdicional=\"si\" or\ninformacionAdicional = null"
+          }
+        }
+      ],
+      "showOutline": true,
+      "type": "group",
+      "layout": {
+        "row": "Row_03xqzji",
+        "columns": null
+      },
+      "id": "Field_10c88ai"
+    }
+  ],
+  "type": "default"
+}
